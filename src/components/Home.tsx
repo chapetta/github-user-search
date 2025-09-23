@@ -1,16 +1,20 @@
 import darkIcon from '../assets/icon-moon.svg'
+import searchIcon from '../assets/icon-search.svg'
 
 export const Home = () => {
   return (
     <main className="bg-blue-300">
-      <header className=''>
-        <h1>devfinder</h1>
-        <p>Dark <span><img src={darkIcon} alt="" /></span></p>
+      <header className='flex justify-between m-3 p-2'>
+        <h1 className='text-3xl text-black font-bold'>devfinder</h1>
+        <p className='flex gap-2 font-bold text-neutral-500 text-[20px] items-center'>Dark <span><img src={darkIcon} alt="" /></span></p>
       </header>
 
-      <div>
-        <input type="text" placeholder='Search Github username...' />
-        <button>search</button>
+      <div className='flex justify-baseline w-auto gap-3 bg-neutral-0 m-3 p-2 rounded-2xl'>
+        <img src={searchIcon} alt="search icon" />
+        <input type="text" placeholder='Search Github username...' 
+        className='text-neutral-700'
+        />
+        <button className='bg-blue-500'>search</button>
       </div>
 
       <section>
