@@ -60,18 +60,18 @@ export const Home = () => {
         <p className='flex gap-2 font-bold text-neutral-300 text-[20px] items-center'>Dark <span><img src={darkIcon} alt="" /></span></p>
       </header>
 
-      <div className='flex justify-baseline w-auto gap-3 bg-neutral-0 m-3 p-4 rounded-[12px]  shadow-xl mb-8'>
-        <img src={searchIcon} alt="search icon" />
+      <div className='flex items-center w-full gap-3 bg-neutral-0 m-3 p-2 rounded-[12px]  shadow-xl mb-8 mr-10'>
+        <img src={searchIcon} alt="search icon"  className='w-5 h-5 ml-2'/>
         <input type="text" placeholder='Search Github username...'
-          className='text-neutral-700'
+          className='flex-1 min-w-0 p-2 text-neutral-700 bg-transparent outline-none'
           onChange={({ target }) => setInputValue(target.value)}
         />
-        <button className='bg-blue-500 '
+        <button className='bg-blue-500 rounded-md text-neutral-0 px-4 py-2'
           onClick={handleButtonSearch}
-        >search</button>
+        >Search</button>
       </div>
 
-      <section className='bg-neutral-0 m-3 rounded-[12px]  shadow-xl p-4'>
+      <section className='bg-neutral-0 m-5 rounded-[12px]  shadow-xl p-4'>
         <div className='flex items-center gap-4 bg-neutral-0 mb-8'>
           <img src={profileData.avatar_url} alt="imagem de perfil github"
             className='w-20 rounded-full'
