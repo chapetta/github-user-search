@@ -49,8 +49,8 @@
   ========================= */
   body {
     font-family: var(--font-sans);
-    background-color: var(--color-blue-300);
-    color: var(--color-neutral-0);
+    background-color: var(--color-neutral-100);
+    color: var(--color-neutral-600);
     margin: 0;
     padding: 0;
   }
