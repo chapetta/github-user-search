@@ -4,6 +4,14 @@ import searchIcon from '../assets/icon-search.svg'
 import { searchProfile } from '../services/gitHubAPI';
 import { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
+import locationIcon from '../assets/icon-location.svg'
+import twitterIcon from '../assets/icon-twitter.svg'
+import websiteIcon from '../assets/icon-website.svg'
+import companyIcon from '../assets/icon-company.svg'
+
+
+
+
 
 type ProfileType = {
   name: string,
@@ -49,10 +57,10 @@ export const Home = () => {
     <main className="bg-neutral-100">
       <header className='flex justify-between m-3 p-2'>
         <h1 className='text-3xl text-black font-bold'>devfinder</h1>
-        <p className='flex gap-2 font-bold text-neutral-500 text-[20px] items-center'>Dark <span><img src={darkIcon} alt="" /></span></p>
+        <p className='flex gap-2 font-bold text-neutral-300 text-[20px] items-center'>Dark <span><img src={darkIcon} alt="" /></span></p>
       </header>
 
-      <div className='flex justify-baseline w-auto gap-3 bg-neutral-0 m-3 p-4 rounded-[12px]'>
+      <div className='flex justify-baseline w-auto gap-3 bg-neutral-0 m-3 p-4 rounded-[12px]  shadow-xl mb-8'>
         <img src={searchIcon} alt="search icon" />
         <input type="text" placeholder='Search Github username...'
           className='text-neutral-700'
@@ -63,8 +71,8 @@ export const Home = () => {
         >search</button>
       </div>
 
-      <section className='bg-neutral-0 m-3 rounded-[12px]'>
-        <div className='flex items-center gap-4 bg-neutral-0'>
+      <section className='bg-neutral-0 m-3 rounded-[12px]  shadow-xl p-4'>
+        <div className='flex items-center gap-4 bg-neutral-0 mb-8'>
           <img src={profileData.avatar_url} alt="imagem de perfil github"
             className='w-20 rounded-full'
           />
@@ -77,25 +85,25 @@ export const Home = () => {
           </div>
         </div>
         <p>{profileData.bio}</p>
-        <div>
+        <div className='p-6 bg-neutral-100 rounded-2xl my-6 mx-2'>
           <div>
-            <p>repos</p>
-            <p>{profileData.public_repos}</p>
+            <p>Repos</p>
+            <p className='font-bold text-black text-2xl m-2'>{profileData.public_repos}</p>
           </div>
           <div>
             <p>Followers</p>
-            <p>{profileData.followers}</p>
+            <p className='font-bold text-black text-2xl m-2'> {profileData.followers}</p>
           </div>
           <div>
             <p>Following</p>
-            <p>{profileData.following}</p>
+            <p className='font-bold text-black text-2xl m-2'>{profileData.following}</p>
           </div>
         </div>
-        <div>
-          <p>{profileData.location}</p>
-          <p>{profileData.twitter_username}</p>
-          <p>{profileData.blog}</p>
-          <p>{profileData.company}</p>
+        <div className='flex flex-col gap-6'>
+          <p className='flex gap-4 text-neutral-700 items-center'><span><img src={locationIcon} alt="location icon" /></span>{profileData.location}</p>
+          <p className='flex gap-4 items-center text-neutral-700'><span><img src={twitterIcon} alt="" /></span>{profileData.twitter_username ? profileData.twitter_username : 'Not Available'}</p>
+          <p className='flex gap-4 text-neutral-700 items-center'><span><img src={websiteIcon} alt="" /></span>{profileData.blog}</p>
+          <p className='flex gap-4 text-neutral-700 items-center'><span><img src={companyIcon} alt="" /></span>{profileData.company ? profileData.company : 'Not Available'}</p>
         </div>
       </section>
     </main>
