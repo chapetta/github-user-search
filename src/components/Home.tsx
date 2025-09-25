@@ -57,7 +57,7 @@ export const Home = () => {
     <main className="bg-neutral-100">
       <header className='flex justify-between m-3 p-2'>
         <h1 className='text-3xl text-black font-bold'>devfinder</h1>
-        <p className='flex gap-2 font-bold text-neutral-300 text-[20px] items-center'>Dark <span><img src={darkIcon} alt="" /></span></p>
+        <p className='flex gap-2 font-bold text-neutral-300 text-[20px] items-center'>Dark <span onClick={toggleTheme}><img src={darkIcon} alt="" /></span></p>
       </header>
 
       <div className='flex items-center w-full gap-3 bg-neutral-0 m-3 p-2 rounded-[12px]  shadow-xl mb-8 mr-10'>
