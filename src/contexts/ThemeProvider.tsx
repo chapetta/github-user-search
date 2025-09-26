@@ -15,6 +15,8 @@ export const ThemeProvider = ({children}: ThemeProviderProps ) => {
    const toggleTheme = () => {
 
   setTheme((theme) => theme === 'dark' ? 'light' : 'dark')
+  console.log('mudou')
+  console.log(theme)
 
 }
 

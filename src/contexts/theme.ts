@@ -5,6 +5,7 @@ export const themeConfig = {
   light: {
     name: 'light',
     layout: {
+      titleColor: 'text-black',
       backgroundColor: 'bg-neutral-100',
       bioColor: 'text-neutral-300',
       nameColor: 'text-black',
@@ -18,6 +19,7 @@ export const themeConfig = {
    dark: {
     name: 'dark',
     layout: {
+      titleColor: 'text-neutral-0',
       backgroundColor: 'bg-neutral-900',
       bioColor: 'text-neutral-100',
       nameColor: 'text-neutral-0',
