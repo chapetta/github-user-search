@@ -12,7 +12,9 @@ export const ProfileCard = ({profileData}: {profileData: ProfileType}) => {
   const { theme } = useContext(ThemeContext)
 
     return (
-        <section className={`${themeConfig[theme].layout.profileBackgroundColor} m-5 rounded-[12px] shadow-xl p-4`}>
+        <section className={`${themeConfig[theme].layout.profileBackgroundColor} m-5 rounded-[12px] shadow-xl p-4 
+          lg:w-3xl lg:mx-auto
+        `}>
           <div className={`flex items-center gap-4 ${themeConfig[theme].layout.profileBackgroundColor} mb-8`}>
             <img src={profileData.avatar_url} alt="imagem de perfil github" className="w-20 rounded-full" />
             <div>
