@@ -63,7 +63,7 @@ export const Home = () => {
   }, [theme]);
 
   return (
-    <main className={`${themeConfig[theme].layout.backgroundColor}`}>
+    <main className={`lg:max-w-3xl lg:w-[730px] lg:h-[570px] lg:mx-auto ${themeConfig[theme].layout.backgroundColor} lg:mt-[200px]`}>
       <Header />      
       <SearchProfile  setInputValue={ setInputValue} handleButtonSearch={ handleButtonSearch }/>
       {notFound ? (

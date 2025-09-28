@@ -13,7 +13,7 @@ export const SearchProfile = ({ setInputValue, handleButtonSearch }: SearchPropT
   const { theme } = useContext(ThemeContext)
 
     return (
-        <div className={`flex items-center gap-3 ${themeConfig[theme].layout.inputBackgroundColor} m-3 p-2 rounded-[12px] shadow-xl mb-8 lg:w-3xl lg:mx-auto `}>
+        <div className={`flex items-center gap-3 ${themeConfig[theme].layout.inputBackgroundColor} m-3 p-2 rounded-[12px] shadow-xl mb-8 lg:max-w-[730px] lg:max-h-[570px] `}>
         <img src={searchIcon} alt="search icon" className="w-5 h-5 ml-2" />
         <input
           type="text"
